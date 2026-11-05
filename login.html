@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Login - AI Study Buddy</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            AI Study Buddy
+        </div>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/register">Register</a>
+        </nav>
+
+    </header>
+
+
+    <section class="form-section">
+
+        <div class="form-box">
+
+            <h2>Student Login</h2>
+
+            <form action="/login" method="POST">
+
+                <label>Email</label>
+
+                <input type="email"
+                       name="email"
+                       placeholder="Enter your email"
+                       required>
+
+
+                <label>Password</label>
+
+                <input type="password"
+                       name="password"
+                       placeholder="Enter password"
+                       required>
+
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

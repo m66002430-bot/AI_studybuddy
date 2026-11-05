@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>AI Prediction - Study Buddy</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        AI Study Buddy
+    </div>
+
+    <nav>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
+    </nav>
+
+</header>
+
+
+<section class="prediction-section">
+
+    <div class="prediction-card">
+
+        <h2>🤖 AI Performance Prediction</h2>
+
+        <h3>Subject: {{ subject }}</h3>
+
+        <div class="prediction-score">
+            {{ prediction }}%
+        </div>
+
+        <p>
+            This is your predicted performance based on
+            marks, attendance and study hours.
+        </p>
+
+        <a href="/dashboard" class="prediction-btn">
+            Go to Dashboard
+        </a>
+
+        <div class="performance-details">
+
+    <div class="performance-level">
+        📊 Performance Level: {{ level }}
+    </div>
+
+    <div class="recommendation-box">
+
+        <h3>💡 AI Recommendation</h3>
+
+        <p>
+            {{ recommendation }}
+        </p>
+
+    </div>
+
+    <div class="study-plan-box">
+
+        <h3>📚 Recommended Study Time</h3>
+
+        <p>
+            {{ study_plan }}
+        </p>
+
+    </div>
+
+</div>
+
+    </div>
+    
+
+</section>
+
+</body>
+
+</html>

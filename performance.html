@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Performance</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>AI StudyBuddy</h1>
+
+        <nav>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/logout">Logout</a>
+        </nav>
+    </header>
+
+
+    <section class="form-section">
+
+        <div class="form-box">
+
+            <h2>Student Performance</h2>
+
+            <p>Enter your academic performance details</p>
+
+            <form action="/performance" method="POST">
+
+                <label>Subject</label>
+                <input type="text"
+                       name="subject"
+                       placeholder="Enter subject"
+                       required>
+
+
+                <label>Marks</label>
+                <input type="number"
+                       name="marks"
+                       placeholder="Enter marks"
+                       min="0"
+                       max="100"
+                       required>
+
+
+                <label>Attendance (%)</label>
+                <input type="number"
+                       name="attendance"
+                       placeholder="Enter attendance"
+                       min="0"
+                       max="100"
+                       step="0.1"
+                       required>
+
+
+                <label>Study Hours</label>
+                <input type="number"
+                       name="study_hours"
+                       placeholder="Hours per day"
+                       min="0"
+                       max="24"
+                       step="0.1"
+                       required>
+
+
+                <button type="submit">
+                    Save Performance
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
